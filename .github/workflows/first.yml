@@ -1,0 +1,14 @@
+name : yaml file for basic demo 
+
+on :
+  push :
+
+
+job : 
+  demo :
+    runs-on : ubuntu-latest 
+
+    steps :
+      - name : print hello
+        run : echo "Hello from github action i am brahma"
+  
