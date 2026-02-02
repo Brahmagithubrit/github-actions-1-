@@ -6,6 +6,11 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  issues: write
+  pull-requests: write
+
+  
 jobs:
   send_msg:
     runs-on: ubuntu-latest
