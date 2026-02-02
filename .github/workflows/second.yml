@@ -1,0 +1,29 @@
+name : auto deploy html file to github pages 
+
+on :
+  push :
+   branch: [master]
+
+jobs :
+  name : first job 
+  runs-on : ubuntu-latest
+  steps : 
+   - name : checkout 
+     uses : actions/checkout@v4 
+   - name : setup pages  
+     uses : actions/configure@v5
+   - name : copy all pages  (upload artifact ) 
+     uses : actoins/upload-pages-artifact@v3
+     with :
+       path : "."
+
+   - name : now deploy the code to pages 
+     id : deployment 
+     uses : actions/deploy-pages@v4
+       
+
+
+
+
+
+
